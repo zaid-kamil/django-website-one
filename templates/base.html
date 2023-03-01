@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Demo Website</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            display: grid;
+            height: 100vh;
+        }
+
+
+        nav {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 1rem;
+            background-color: #34a9f2;
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+            column-gap: 5rem;
+        }
+
+        nav ul li {
+            margin: 0 10px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: black;
+            font-size: 1.5rem
+        }
+    </style>
+</head>
+
+<body>
+    <div class="header">
+        <nav>
+            <ul>
+                <li><a href="/">Home</a></li>
+                <li><a href="/about">About</a></li>
+                <li><a href="/privacy">Privacy </a></li>
+            </ul>
+        </nav>
+    </div>
+    <main>
+        
+        {% block content %}{% endblock content %}
+            
+    </main>
+    <footer></footer>
+</body>
+
+</html>
